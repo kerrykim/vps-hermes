@@ -1,0 +1,7 @@
+{
+  "name": "vps-hermes",
+  "description": "VPS에 Hermes Agent를 설치하는 전체 셋업 스킬. 로컬 Tailscale 설치, VPS 유저 생성, Tailnet 구성, SSH 키 설정, Hermes 설치를 순서대로 진행합니다.",
+  "author": {
+    "name": "kerry"
+  }
+}
