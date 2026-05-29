@@ -16,16 +16,24 @@
     {
       "name": "vps-hermes-setup",
       "trigger": "/vps-hermes-setup",
-      "description": "Step-by-step VPS setup: Tailscale, user creation, SSH key config, and Hermes Agent installation."
+      "description": "Step-by-step VPS setup: Tailscale, user creation, SSH key config, and Hermes Agent installation.",
+      "skillFile": "skills/vps-hermes-setup/SKILL.md"
     }
   ],
   "requirements": [
     "A fresh VPS with root SSH access",
-    "Claude Code installed locally",
-    "Tailscale account (free tier works)"
+    "Tailscale account (free tier works)",
+    "An AI agent tool capable of executing shell commands (Claude Code, Cursor, Windsurf, Copilot Workspace, or any MCP-compatible agent)"
   ],
   "installation": {
-    "marketplace": "claude plugin marketplace add https://github.com/kerrykim/vps-hermes",
-    "install": "claude plugin install vps-hermes"
+    "claudeCode": {
+      "marketplace": "claude plugin marketplace add https://github.com/kerrykim/vps-hermes",
+      "install": "claude plugin install vps-hermes"
+    },
+    "manual": "Copy skills/vps-hermes-setup/SKILL.md to your AI agent's skill/prompt directory and invoke it as /vps-hermes-setup"
+  },
+  "compatibility": {
+    "aiAgents": ["Claude Code", "Cursor", "Windsurf", "Copilot Workspace", "any MCP-compatible agent"],
+    "protocols": ["MCP", "Claude Code Plugin"]
   }
 }
