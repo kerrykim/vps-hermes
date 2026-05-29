@@ -1,0 +1,31 @@
+{
+  "name": "vps-hermes",
+  "version": "1.0.0",
+  "description": "A Claude Code plugin that automates the full setup of Hermes Agent on a VPS — from first SSH login to a running Hermes instance.",
+  "descriptionKr": "VPS에 Hermes Agent를 설치하는 전체 셋업 스킬. 로컬 Tailscale 설치, VPS 유저 생성, Tailnet 구성, SSH 키 설정, Hermes 설치를 순서대로 진행합니다.",
+  "author": {
+    "name": "kerry",
+    "github": "kerrykim"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/kerrykim/vps-hermes",
+  "cloneUrl": "https://github.com/kerrykim/vps-hermes.git",
+  "keywords": ["vps", "hermes", "tailscale", "ssh", "infrastructure", "automation"],
+  "category": "infrastructure",
+  "skills": [
+    {
+      "name": "vps-hermes-setup",
+      "trigger": "/vps-hermes-setup",
+      "description": "Step-by-step VPS setup: Tailscale, user creation, SSH key config, and Hermes Agent installation."
+    }
+  ],
+  "requirements": [
+    "A fresh VPS with root SSH access",
+    "Claude Code installed locally",
+    "Tailscale account (free tier works)"
+  ],
+  "installation": {
+    "marketplace": "claude plugin marketplace add https://github.com/kerrykim/vps-hermes",
+    "install": "claude plugin install vps-hermes"
+  }
+}
